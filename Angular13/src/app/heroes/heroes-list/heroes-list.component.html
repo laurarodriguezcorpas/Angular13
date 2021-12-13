@@ -1,0 +1,18 @@
+<p>HEROES LIST</p>
+<ul>
+  <li *ngFor="let heroe of heroesList; let i = index">
+    {{ i + 1 }} - {{ heroe }}
+  </li>
+</ul>
+
+<div>
+  <p>
+    Hero you want to delete
+    <input #deleteHeroBox type="text" value="" />
+  </p>
+  <p>
+    <button (click)="deleteWholeList()">DELETE ALL</button>
+    <button (click)="deleteListHeroeByIndex(deleteHeroBox.value)">DELETE BY INDEX</button>
+    <button (click)="deleteListHeroeByValue(deleteHeroBox.value)">DELETE BY VALUE</button>
+  </p>
+</div>
