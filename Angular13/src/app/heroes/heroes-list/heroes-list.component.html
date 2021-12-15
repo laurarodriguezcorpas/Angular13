@@ -1,0 +1,32 @@
+<p>HEROES LIST</p>
+<div id="#deleteHeroDiv" *ngIf="heroesList.length > 0; else noDelete">
+  <p>
+    Hero you want to delete
+    <input #deleteHeroBox type="text" value="" />
+  </p>
+  <p>
+    <button (click)="deleteWholeList()">DELETE ALL</button>
+    <button (click)="deleteListHeroeByIndex(deleteHeroBox.value)">
+      DELETE BY INDEX
+    </button>
+    <button (click)="deleteListHeroeByValue(deleteHeroBox.value)">
+      DELETE BY VALUE
+    </button>
+  </p>
+</div>
+
+<ng-template #noDelete> Nothing to delete </ng-template>
+
+<div id="#heroesListDiv">
+  <ul>
+    <li *ngFor="let heroe of heroesList; let i = index">
+      {{ i + 1 }} - {{ heroe }}
+    </li>
+  </ul>
+</div>
+
+<div>
+  <p>
+    <button (click)="testFunction(heroesList)">DUMMY</button>
+  </p>
+</div>
