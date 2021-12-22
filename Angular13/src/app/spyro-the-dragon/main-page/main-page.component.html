@@ -1,0 +1,36 @@
+<h1>SPYRO THE DRAGON</h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <h3>Characters</h3>
+    <hr />
+    <ul>
+      <li>Spyro - 85</li>
+      <li>Sheila - 90</li>
+      <li>Sgt. James Byrd - 80</li>
+      <li>Agent 9 - 65</li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <h2>Add</h2>
+    <br />
+    <form (ngSubmit)="add()">
+      <input
+        type="text"
+        placeholder="Name"
+        name="name"
+        [(ngModel)]="newCharacter.name"
+      />
+      <input
+        type="number"
+        placeholder="Number"
+        name="power"
+        [(ngModel)]="newCharacter.power"
+      />
+      <input type="hidden" placeholder="Hidden Input" />
+      <button>ADD</button>
+    </form>
+  </div>
+</div>
